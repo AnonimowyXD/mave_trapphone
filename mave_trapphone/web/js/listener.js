@@ -1,1 +1,30 @@
-var _0x169118=_0x51f6;function _0x51f6(_0x2e90b4,_0x78ac51){var _0x1b1458=_0x1b14();return _0x51f6=function(_0x51f6b3,_0xef5e2d){_0x51f6b3=_0x51f6b3-0x7a;var _0x3697f2=_0x1b1458[_0x51f6b3];return _0x3697f2;},_0x51f6(_0x2e90b4,_0x78ac51);}(function(_0x133cf4,_0x3ee27a){var _0x554059=_0x51f6,_0x22891c=_0x133cf4();while(!![]){try{var _0x530c9a=-parseInt(_0x554059(0x7e))/0x1*(-parseInt(_0x554059(0x8b))/0x2)+parseInt(_0x554059(0x84))/0x3*(parseInt(_0x554059(0x8e))/0x4)+-parseInt(_0x554059(0x7c))/0x5*(-parseInt(_0x554059(0x8f))/0x6)+parseInt(_0x554059(0x80))/0x7+-parseInt(_0x554059(0x8c))/0x8+-parseInt(_0x554059(0x87))/0x9+-parseInt(_0x554059(0x7b))/0xa;if(_0x530c9a===_0x3ee27a)break;else _0x22891c['push'](_0x22891c['shift']());}catch(_0x40073f){_0x22891c['push'](_0x22891c['shift']());}}}(_0x1b14,0x43f82),$(document)[_0x169118(0x88)](function(){var _0x172e17=_0x169118;function _0x4229d8(_0x1378f2){var _0x1a6b63=_0x51f6;_0x1378f2?$(_0x1a6b63(0x7d))[_0x1a6b63(0x85)]():$(_0x1a6b63(0x7d))[_0x1a6b63(0x7f)]();}_0x4229d8(![]),window['addEventListener']('message',function(_0x3b5c27){var _0x12c809=_0x51f6,_0x29b7a7=_0x3b5c27[_0x12c809(0x8d)];_0x29b7a7[_0x12c809(0x8a)]===_0x12c809(0x82)&&(_0x29b7a7[_0x12c809(0x7a)]==!![]?_0x4229d8(!![]):_0x4229d8(![]));}),document[_0x172e17(0x89)]=function(_0x59d3bf){var _0x330d23=_0x172e17;if(_0x59d3bf['which']==0x1b){$[_0x330d23(0x83)](_0x330d23(0x86),JSON[_0x330d23(0x81)]({}));return;}};}));function _0x1b14(){var _0x4aa90b=['2lmFRUE','455736faMgNe','data','2145068YJNMNh','4530GKVyID','status','8328430UOeijt','2045sHVRVn','body','110486eyiiXH','hide','2326884ilicWO','stringify','open','post','3erUFzv','show','https://mave_trapphone/close','1077732AsXMOy','ready','onkeyup','type'];_0x1b14=function(){return _0x4aa90b;};return _0x1b14();}
+$(document).ready(function () {
+  function toggleBodyVisibility(isVisible) {
+    if (isVisible) {
+      $("body").show();
+    } else {
+      $("body").hide();
+    }
+  }
+
+  toggleBodyVisibility(false);
+
+  window.addEventListener('message', function (eventData) {
+    var messageData = eventData.data;
+    if (messageData.type === "open") {
+      if (messageData.status == true) {
+        toggleBodyVisibility(true);
+      } else {
+        toggleBodyVisibility(false);
+      }
+    }
+  });
+
+  document.onkeyup = function (keyEvent) {
+    if (keyEvent.which === 27) 
+    {
+      $.post("https://mave_trapphone/close", JSON.stringify({}));
+      return;
+    }
+  };
+});
