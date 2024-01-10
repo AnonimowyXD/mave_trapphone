@@ -16,12 +16,3 @@ SetDisplay = function(bool)
         status = bool
     })
 end
-
---[[function SetDisplay(bool)
-    display = bool
-    SetNuiFocus(bool, bool)
-    SendNUIMessage({
-        type = "open",
-        status = bool
-    })
-end--]]
