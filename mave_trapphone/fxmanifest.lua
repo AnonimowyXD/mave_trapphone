@@ -18,10 +18,3 @@ files {
 	"web/js/jquery-3.6.0.min.js",
 	"web/js/listener.js",
 }
-
-escrow_ignore {
-	'client.lua',
-	'server.lua',
-	'config.lua',
-	'web/index.html'
-  }
